@@ -5,6 +5,9 @@ import Projects from './srcs/Projects';
 import Skills from './srcs/Skills';
 import CertSchool from './srcs/CertSchool';
 import Contacts from './srcs/Contacts';
+import Progress from './srcs/Progress';
+import Hub from './srcs/Hub';
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
         <Route path="/Skills" element={< Skills />} />
         <Route path="/Cert&School" element={< CertSchool />} />
         <Route path="/Contacts" element={< Contacts />} />
+        <Route path="/Progress" element={< Progress />} />
+        <Route path="/Hub" element={< Hub />} />
       </Routes>
     </HashRouter>
   )

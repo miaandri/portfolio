@@ -29,15 +29,10 @@ export default function Home() {
                 <Link to="/Contacts" className="hover:text-pink-500 cursor-pointer pb-1">Contacts</Link>
             </li>
           </ul>
-          <button
-            // onClick={()=>window.open('')} mail  
-            className="bg-[#ff3b80] hover:bg-pink-600 text-white px-6 py-2 rounded-full font-bold text-sm shadow-md transition-colors">
-            Hire Me
-          </button>
         </nav>
       </div>
 
-      <main className="flex-1 flex items-center justify-between w-full max-w-5xl mx-auto mt-8 px-6 z-10">
+      <main className="flex-1 flex flex-col md:flex-row items-center justify-between w-full max-w-5xl mx-auto mt-8 px-6 z-10">
         
         <div className="max-w-lg space-y-5">
           <h1 className="text-5xl font-bold text-white tracking-wide">
@@ -57,11 +52,16 @@ export default function Home() {
 
         </div>
 
-        <div className="relative flex justify-center mt-8">
+        {/* --- PHOTO RONDE AVEC BORDURE ROSE --- */}
+        <div className="relative flex justify-center items-center mt-8 md:mt-0">
+          {/* Halo lumineux en arrière-plan */}
+          <div className="absolute w-72 h-72 md:w-80 md:h-80 bg-[#ff3b80]/20 rounded-full blur-2xl pointer-events-none"></div>
+
+          {/* Image circulaire avec bordure rose */}
           <img 
-            src="/laila-portrait.png" 
+            src="/pic1.png" 
             alt="picture" 
-            className="h-[450px] object-contain drop-shadow-[0_0_35px_rgba(255,59,128,0.7)]"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-[#ff3b80] shadow-[0_0_30px_rgba(255,59,128,0.35)] relative z-10 transition-transform duration-300 hover:scale-105"
           />
         </div>
       </main>
@@ -126,7 +126,4 @@ export default function Home() {
 
     </div>
   );  
-};
-
-
-
+}
