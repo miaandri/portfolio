@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { SiNextdotjs, SiReact, SiDocker, SiGrafana, SiVagrant, SiOwasp, SiNginx } from "react-icons/si";
+import { SiNestjs, SiReact, SiDocker, SiGrafana, SiVagrant, SiOwasp, SiNginx } from "react-icons/si";
 
 export default function Home() {
   return(
@@ -52,12 +52,9 @@ export default function Home() {
 
         </div>
 
-        {/* --- PHOTO RONDE AVEC BORDURE ROSE --- */}
         <div className="relative flex justify-center items-center mt-8 md:mt-0">
-          {/* Halo lumineux en arrière-plan */}
           <div className="absolute w-72 h-72 md:w-80 md:h-80 bg-[#ff3b80]/20 rounded-full blur-2xl pointer-events-none"></div>
 
-          {/* Image circulaire avec bordure rose */}
           <img 
             src="/pic1.png" 
             alt="picture" 
@@ -66,13 +63,12 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Bottom Tech Stack Bar */}
       <div className="w-full bg-gradient-to-r from-[#171a2b] via-[#521b36] to-[#b12154] mt-auto py-5 z-10 border-t border-white/5">
       <div className="w-full max-w-6xl mx-auto flex justify-between items-center text-xs font-semibold text-gray-300 px-4 md:px-8">
           
             <div className="flex items-center space-x-2">
-                <SiNextdotjs className="text-white text-2xl" />
-                <span>Next JS</span>
+                <SiNestjs className="text-white text-2xl" />
+                <span>NestJS</span>
             </div>
             
             <div className="hidden md:block w-px h-5 bg-white/20"></div>

@@ -6,7 +6,6 @@ import Skills from './srcs/Skills';
 import CertSchool from './srcs/CertSchool';
 import Contacts from './srcs/Contacts';
 import Progress from './srcs/Progress';
-import Hub from './srcs/Hub';
 
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         <Route path="/Cert&School" element={< CertSchool />} />
         <Route path="/Contacts" element={< Contacts />} />
         <Route path="/Progress" element={< Progress />} />
-        <Route path="/Hub" element={< Hub />} />
       </Routes>
     </HashRouter>
   )

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Contacts() {
   const contactLinks = [
@@ -36,60 +37,85 @@ export default function Contacts() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0b0f19] text-white flex items-center justify-center p-6">
-      {/* Conteneur principal */}
-      <div className="w-full max-w-4xl bg-[#111625] rounded-[2rem] p-8 md:p-12 border border-white/5 shadow-2xl relative overflow-hidden">
-        
-        {/* Halo lumineux en arrière-plan */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
+    <div className="min-h-screen bg-[#131527] text-white font-sans flex flex-col relative overflow-hidden">
+      
+      <div className="pt-6 w-full flex justify-center z-10">
+        <nav className="flex items-center justify-between bg-[#ffc5d9] text-[#131527] rounded-full px-6 py-2 w-full max-w-4xl shadow-lg">
+          <div className="font-extrabold text-pink-600 tracking-widest text-lg ml-2">LALAINA</div>
+          <ul className="flex space-x-6 text-xs font-bold uppercase tracking-wide">
+            <li>
+                <Link to="/" className="hover:text-pink-500 cursor-pointer pb-1">Home</Link>
+            </li>
+            <li>
+                <Link to="/AboutMe" className="hover:text-pink-500 cursor-pointer pb-1">About</Link>
+            </li>
+            <li>
+                <Link to="/Projects" className="hover:text-pink-500 cursor-pointer pb-1">Projects</Link>
+            </li>
+            <li>
+                <Link to="/Skills" className="hover:text-pink-500 cursor-pointer pb-1">Skills</Link>
+            </li>
+            <li>
+                <Link to="/Cert&School" className="hover:text-pink-500 cursor-pointer pb-1">Cert.&School</Link>
+            </li>
+            <li>
+                <Link to="/Contacts" className="hover:text-pink-500 cursor-pointer pb-1">Contacts</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        <div className="relative z-10 flex flex-col items-center gap-8">
+      <div className="flex-1 flex items-center justify-center p-6 md:p-12 relative overflow-hidden">
+        <div className="w-full max-w-4xl bg-[#111625] rounded-[2rem] p-8 md:p-12 border border-white/5 shadow-2xl relative overflow-hidden z-10">
           
-          {/* Titre & Sous-titre */}
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-pink-400 flex items-center justify-center gap-3">
-              <span>🌸</span> Contact Me <span>🌸</span>
-            </h2>
-            <p className="text-gray-400 text-xs md:text-sm font-mono mt-2 tracking-wider">
-              Get in touch with me directly
-            </p>
-          </div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500/10 blur-3xl rounded-full pointer-events-none"></div>
 
-          {/* Grille des liens de contact */}
-          <div className="w-full max-w-lg flex flex-col gap-4 mt-2">
-            {contactLinks.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                target={item.isExternal ? "_blank" : "_self"}
-                rel={item.isExternal ? "noopener noreferrer" : ""}
-                className="bg-[#181f30] border border-white/5 rounded-2xl p-4 flex items-center justify-between group hover:border-pink-500/40 hover:bg-[#1d263b] transition-all duration-300 hover:shadow-[0_0_20px_rgba(236,72,153,0.25)] hover:-translate-y-0.5"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-pink-500/10 border border-pink-500/20 rounded-xl group-hover:scale-110 transition-transform">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400 block">
-                      {item.label}
-                    </span>
-                    <span className="text-sm md:text-base font-mono font-medium text-gray-200 group-hover:text-pink-300 transition-colors">
-                      {item.value}
-                    </span>
-                  </div>
-                </div>
+          <div className="relative z-10 flex flex-col items-center gap-8">
+            
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center justify-center gap-3">
+                <span>☎️​</span> Contact Me 
+              </h2>
+              <p className="text-gray-400 text-xs md:text-sm font-mono mt-2 tracking-wider">
+                Get in touch with me directly
+              </p>
+            </div>
 
-                <span className="text-pink-400 font-mono text-sm group-hover:translate-x-1 transition-transform">
-                  ↗
-                </span>
-              </a>
-            ))}
+            <div className="w-full max-w-lg flex flex-col gap-4 mt-2">
+              {contactLinks.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  target={item.isExternal ? "_blank" : "_self"}
+                  rel={item.isExternal ? "noopener noreferrer" : ""}
+                  className="bg-[#181f30] border border-white/5 rounded-2xl p-4 flex items-center justify-between group hover:border-pink-500/40 hover:bg-[#1d263b] transition-all duration-300 hover:shadow-[0_0_20px_rgba(236,72,153,0.25)] hover:-translate-y-0.5"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-pink-500/10 border border-pink-500/20 rounded-xl group-hover:scale-110 transition-transform">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400 block">
+                        {item.label}
+                      </span>
+                      <span className="text-sm md:text-base font-mono font-medium text-gray-200 group-hover:text-pink-300 transition-colors">
+                        {item.value}
+                      </span>
+                    </div>
+                  </div>
+
+                  <span className="text-pink-400 font-mono text-sm group-hover:translate-x-1 transition-transform">
+                    ↗
+                  </span>
+                </a>
+              ))}
+            </div>
+
           </div>
 
         </div>
-
       </div>
+
     </div>
   );    
 }
-
